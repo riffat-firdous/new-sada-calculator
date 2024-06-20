@@ -1,16 +1,18 @@
 {
-  "name": "video-code",
+  "name": "new-sada-calculator",
   "version": "1.0.0",
   "description": "",
-  "main": "sada-calculator",
+  "main": "new-sada-calculator.js",
   "type": "module",
-  "bin": "index.js",
+  "bin": {
+    "sada-calculator": "sada-calculator.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "",
+  "author": "Riffat Firdous",
+  "license": "MIT",
   "devDependencies": {
     "@types/inquirer": "^9.0.7",
     "@types/node": "^20.14.2"
