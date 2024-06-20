@@ -1,61 +1,44 @@
+#! /usr/bin/env node
+
 import inquirer from "inquirer"
 
-//printing a Welcome Message
+const ans = await inquirer.prompt([{
 
-console.log("\n \t Wellcom To \`Code With Riffat\` Sada-Calculator\n");
-
-//Asking Question from User through Inquirer
-
-let answer = await inquirer.prompt([
-
-{message: " Enter First Number" ,type:"number" , name: "firstNumber"},
-
-{message: " Enter Second Number" ,type:"number" , name: "secondNumber"},
-
-{
-
-   message:"Select one operator to perform Operation",
-   
-   type:"list",
-   name:"operator",
-   choices:["Addition","Subtraction","Multiplication","Division"],
+    type: "number",
+    name: "first_number",
+    message:" Enter you first number:"
 
 },
-]);
-
-// Condtional Statements if-Else
-
-if (answer.operator === "Addition"){
-
-    console.log(answer.firstNumber + answer.secondNumber)
-}
-
-else if (answer.operator === "Subtraction")
 {
+    type: "number",
+    name: "Second_number",
+    message:" Enter you Second number:"
+},
+{
+ type: "list",
+ name: "operator",
+ message: "Please select operation type:",
+ choices: ["Addintion","Subtaction","Multipilication","Division"]
 
-    console.log(answer.firstNumber - answer.secondNumber)
 }
-else if (answer.operator === "Multiplication")
-    {
+]
+)
+
+if (ans.operator === "Addition"){
+
+    console.log(ans.first + ans.Second_number);
+
+}
+else if (ans.operator === "Subtraction"){
+
+    console.log(ans.first - ans.Second_number);
+}
+ else if (ans.operator === "multiplication"){
+
+    console.log(ans.first * ans.Second_number);
+ }
+else if (ans.operator === "Subtraction"){
     
-     console.log(answer.firstNumber * answer.secondNumber)
-    }
+    console.log(ans.first / ans.Second_number); 
 
-  else if (answer.operator === "Division")
-   {
-        
-      console.log(answer.firstNumber / answer.secondNumber)
-    
-    }
-
-    else{
-        console.log("Invalid Input")
-    }
-    
-
-
-
-
-
-
-
+ }  

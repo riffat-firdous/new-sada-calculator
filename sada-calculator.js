@@ -1,30 +1,33 @@
-import inquirer from "inquirer";
-//printing a Welcome Message
-console.log("\n \t Wellcom To \`Code With Riffat\` Sada-Calculator\n");
-//Asking Question from User through Inquirer
-let answer = await inquirer.prompt([
-    { message: " Enter First Number", type: "number", name: "firstNumber" },
-    { message: " Enter Second Number", type: "number", name: "secondNumber" },
+#! /usr/bin/env node
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var inquirer_1 = require("inquirer");
+var ans = await inquirer_1.default.prompt([{
+        type: "number",
+        name: "first_number",
+        message: " Enter you first number:"
+    },
     {
-        message: "Select one operator to perform Operation",
+        type: "number",
+        name: "Second_number",
+        message: " Enter you Second number:"
+    },
+    {
         type: "list",
         name: "operator",
-        choices: ["Addition", "Subtraction", "Multiplication", "Division"],
-    },
+        message: "Please select operation type:",
+        choices: ["Addintion", "Subtaction", "Multipilication", "Division"]
+    }
 ]);
-// Condtional Statements if-Else
-if (answer.operator === "Addition") {
-    console.log(answer.firstNumber + answer.secondNumber);
+if (ans.operator === "Addition") {
+    console.log(ans.first + ans.Second_number);
 }
-else if (answer.operator === "Subtraction") {
-    console.log(answer.firstNumber - answer.secondNumber);
+else if (ans.operator === "Subtraction") {
+    console.log(ans.first - ans.Second_number);
 }
-else if (answer.operator === "Multiplication") {
-    console.log(answer.firstNumber * answer.secondNumber);
+else if (ans.operator === "multiplication") {
+    console.log(ans.first * ans.Second_number);
 }
-else if (answer.operator === "Division") {
-    console.log(answer.firstNumber / answer.secondNumber);
-}
-else {
-    console.log("Invalid Input");
+else if (ans.operator === "Subtraction") {
+    console.log(ans.first / ans.Second_number);
 }
