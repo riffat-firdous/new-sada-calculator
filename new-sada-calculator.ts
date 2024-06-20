@@ -41,7 +41,7 @@ else if (ans.operator === "Subtraction"){
  }
 else if (ans.operator === "Division"){
     
-    console.log(ans.first_number / ans.second_number); 
+console.log(ans.first_number / ans.second_number); 
 
  }  else{
 
