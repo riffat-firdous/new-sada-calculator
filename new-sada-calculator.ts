@@ -47,3 +47,5 @@ console.log(ans.first_number / ans.second_number);
 
     console.log("invalid input")
  }
+
+ 
